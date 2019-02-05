@@ -9,6 +9,10 @@
 .header {
   background-color: #fff;
   height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
 }
 
 .content {
