@@ -1,6 +1,6 @@
 .container {
   max-width: 120rem;
-  height: 50rem;
+  min-height: 50rem;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   margin: 8rem auto;
@@ -28,7 +28,6 @@
 }
 
 .hotel-view {
-  background-color: orangered;
   flex: 1;
 
   // FIXME: for testing purposes

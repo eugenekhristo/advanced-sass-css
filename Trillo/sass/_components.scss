@@ -163,5 +163,52 @@
 }
 
 .legal {
-  
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    // to prevent white lines udnex image
+    display: block;
+    width: 100%;
+  } 
+}
+
+.overview {
+  display: flex;
+
+  &__hotel-name {
+
+  }
+
+  &__stars {
+    // if this is flex-item we can simulate flex-grow 1 with margin-right (left): auto;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+
+  }
+
+  &__rating {
+    &-average {
+
+    }
+
+    &-count {
+
+    }
+  }
 }
