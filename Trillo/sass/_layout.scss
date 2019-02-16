@@ -30,7 +30,16 @@
 
 .hotel-view {
   flex: 1;
-
-  // FIXME: for testing purposes
-  height: 80rem;
 }
+
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+
+
+
