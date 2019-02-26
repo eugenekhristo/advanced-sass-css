@@ -110,6 +110,10 @@
 
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
     }
 
     &::before {
@@ -136,6 +140,12 @@
     &:active::before {
       background-color: var(--color-primary-light);
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__link:link, 
@@ -157,8 +167,10 @@
     margin-right: 2rem;
   }
 
-  &__label {
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
   }
 }
 
@@ -167,6 +179,10 @@
   padding: 2.5rem;
   color: var(--color-grey-light-4);
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 .gallery {
@@ -296,6 +312,10 @@
   padding: 3rem;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
 }
 
 /////// PARAGRAPH
@@ -368,6 +388,10 @@
       margin-right: -1.5rem;
     }
   }
+
+  &__friends {
+    display: flex;
+  }
 }
 
 /////// USER REVIEWS
@@ -438,6 +462,10 @@
     font-size: 2.2rem;
     font-weight: 300;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
 }
 
 /////// CTA
@@ -452,6 +480,10 @@
     text-transform: uppercase;
     margin-bottom: 2.5rem;
     line-height: 1.6;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem 0;
   }
 }
 
