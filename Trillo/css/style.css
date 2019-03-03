@@ -26,6 +26,9 @@ html {
   @media only screen and (max-width: 69em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -58,6 +61,11 @@ body {
   align-items: center;
   font-size: 1.4rem;
   border-bottom: 1px solid var(--color-grey-light-2); }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-evenly;
+      height: 11rem; } }
 
 .content {
   display: flex; }
@@ -84,6 +92,9 @@ body {
   @media only screen and (max-width: 56em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .logo {
   height: 3.25rem;
@@ -107,7 +118,7 @@ body {
     transition: all .3s; }
     .search__input:focus {
       outline: none;
-      width: 100%;
+      width: 95%;
       background-color: var(--color-grey-light-3); }
     .search__input::-webkit-input-placeholder {
       color: var(--color-grey-light-4); }
@@ -121,6 +132,11 @@ body {
   .search__icon {
     height: 2rem;
     width: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
 
 .user-nav {
   align-self: stretch;
@@ -148,6 +164,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 25em) {
+      .user-nav__notification {
+        top: 0; } }
   .user-nav__icon {
     height: 2.25rem;
     width: 2.25rem; }
@@ -197,11 +216,27 @@ body {
     align-items: center;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 37.5em) {
+      .nav-bar__link:link, .nav-bar__link:visited {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 3rem; } }
+    @media only screen and (max-width: 25em) {
+      .nav-bar__link:link, .nav-bar__link:visited {
+        justify-content: center;
+        padding: 1rem; } }
   .nav-bar__icon {
     width: 1.75rem;
     height: 1.75rem;
     fill: currentColor;
     margin-right: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .nav-bar__icon {
+        margin-right: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav-bar__label {
+      margin-top: 3px; } }
   @media only screen and (max-width: 56em) {
     .nav-bar {
       display: flex;
@@ -234,9 +269,21 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__hotel-name {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 25em) {
+      .overview__hotel-name {
+        padding: 1.5rem;
+        white-space: nowrap; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 25em) {
+      .overview__stars {
+        order: 1;
+        flex: 0 0 100%;
+        padding: 0 1.5rem 1.5rem; } }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
@@ -262,6 +309,13 @@ body {
     .overview__rating-count {
       font-size: .8rem;
       text-transform: uppercase; }
+      @media only screen and (max-width: 25em) {
+        .overview__rating-count {
+          white-space: nowrap; } }
+  @media only screen and (max-width: 25em) {
+    .overview {
+      flex-wrap: wrap;
+      justify-content: space-between; } }
 
 .btn-inline {
   color: var(--color-primary);
@@ -305,6 +359,10 @@ body {
   @media only screen and (max-width: 56em) {
     .description {
       padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
 
 .paragraph {
   line-height: 2.2rem; }
@@ -329,11 +387,16 @@ body {
       height: 1rem;
       margin-right: .7rem;
       display: inline-block;
-      background-color: var(--color-primary);
-      -webkit-mask-image: url("../img/chevron-thin-right.svg");
-      -webkit-mask-size: contain;
-      mask-image: url("../img/chevron-thin-right.svg");
-      mask-size: contain; }
+      background-image: url("../img/chevron-thin-right.svg");
+      background-size: cover; }
+      @supports (-webkit-mask-image: url()) {
+        .list__item::before {
+          background-color: var(--color-primary);
+          -webkit-mask-image: url("../img/chevron-thin-right.svg");
+          -webkit-mask-size: contain;
+          mask-image: url("../img/chevron-thin-right.svg");
+          mask-size: contain;
+          background-image: none; } }
 
 .recommend {
   font-size: 1.3rem;
@@ -359,6 +422,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .user-reviews {
+      align-items: stretch; } }
+  @media only screen and (max-width: 37.5em) {
+    .user-reviews .btn-inline {
+      align-self: center; } }
 
 .review {
   background-color: #fff;
@@ -415,6 +484,9 @@ body {
     text-transform: uppercase;
     margin-bottom: 2.5rem;
     line-height: 1.6; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__text {
+        font-size: 1.6rem; } }
   @media only screen and (max-width: 56em) {
     .cta {
       padding: 2rem 0; } }
